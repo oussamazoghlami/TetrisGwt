@@ -1,0 +1,33 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:com.sfeir.tutorials.client.views">
+	<ui:style>
+		.title {
+			font-family: calibri;
+			font-size: 18px;
+			padding: 3px 4px 4px 4px;
+			margin: 4px 4px 4px 4px;
+			background: no-repeat bottom left #D8D8D8;
+		}
+		
+		.score {
+			font-family: calibri;
+			padding: 3px 4px 4px 4px;
+			font-size: 18px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:HorizontalPanel>
+			<c:TetrisGameWidget ui:field="gameWidget"></c:TetrisGameWidget>
+			<g:VerticalPanel>
+				<g:Label styleName="{style.title}">Piece Suivante :</g:Label>
+
+				<c:NextElementWidget ui:field="nextElementWidget"></c:NextElementWidget>
+
+				<g:Label styleName="{style.title}">Score :</g:Label>
+
+				<g:Label styleName="{style.score}" ui:field="score">0</g:Label>
+			</g:VerticalPanel>
+		</g:HorizontalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 
